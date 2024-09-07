@@ -1,0 +1,40 @@
+@font-face {
+  font-family: "Play";
+  font-weight: 400;
+  font-style: normal;
+  src:
+    url("../fonts/play-regular.eot") format("eot"),
+    url("../fonts/play-regular.woff") format("woff"),
+    url("../fonts/play-regular.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Play";
+  font-weight: 700;
+  font-style: normal;
+  src:
+    url("../fonts/play-bold.eot") format("eot"),
+    url("../fonts/play-bold.woff") format("woff"),
+    url("../fonts/play-bold.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Avenir Next Cyr";
+  font-weight: 400;
+  font-style: normal;
+  src:
+    url("../fonts/avenirNextCyr-regular.eot") format("eot"),
+    url("../fonts/avenirNextCyr-regular.woff") format("woff"),
+    url("../fonts/avenirNextCyr-regular.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Avenir Next Cyr";
+  font-weight: 700;
+  font-style: normal;
+  src:
+    url("../fonts/avenirNextCyr-bold.eot") format("eot"),
+    url("../fonts/avenirNextCyr-bold.woff") format("woff"),
+    url("../fonts/avenirNextCyr-bold.woff2") format("woff2");
+  font-display: swap;
+}
