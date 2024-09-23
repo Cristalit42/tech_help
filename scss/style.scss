@@ -47,11 +47,13 @@ body {
 
 /* Чтобы избежать смещения содержимого после прилипания */
 .header__row {
-  transition: all 0.3s ease; /* Для плавного перехода */
+  transition: all 0.3s ease;
+  /* Для плавного перехода */
 }
 
 .header__form-wrapper {
-  transition: all 0.3s ease; /* Для плавного перехода */
+  transition: all 0.3s ease;
+  /* Для плавного перехода */
 }
 
 
@@ -379,14 +381,19 @@ body {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   margin-bottom: 35px;
+}
+
+.advantages__content--page {
+  margin-bottom: 0px;
 }
 
 .advantages__content-item {
   display: flex;
   align-items: center;
   max-width: 300px;
+  margin: 0 auto;
 
   &:last-child {
     max-width: 330px;
@@ -413,6 +420,31 @@ body {
 .advantages__text {
   @include text-style(400, 18px, 144%, #676785);
 
+}
+
+.advantages__title {
+  font-size: 36px;
+  margin: 16px 0px;
+}
+
+.advantages__blockqoute {
+  @include text-style(400, 20px, normal, #4f4f6b);
+  letter-spacing: -0.02em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 17px;
+  background: #ffd706;
+  border-radius: 6px;
+  margin-bottom: 16px;
+
+  span {
+    font-weight: 700;
+  }
+}
+
+.advantages__blockqoute-img {
+  margin-right: 12px;
 }
 
 //advantages end
@@ -1468,6 +1500,18 @@ body {
   background-repeat: no-repeat;
 }
 
+.contacts--assort {
+  background-image: url("../images/assort-page/form-img.png");
+  background-position: center;
+  background-size: cover;
+  height: 900px;
+
+  .contacts__inner {
+    padding-top: 48px;
+  }
+
+}
+
 .contacts__inner {
   padding-top: 100px;
   padding-bottom: 70px;
@@ -1478,6 +1522,19 @@ body {
 
   &:last-child {
     margin-bottom: 37px;
+  }
+}
+
+.contacts__title--assort {
+  &:first-child {
+    max-width: 854px;
+    font-size: 50px;
+    margin: 0 auto;
+    margin-bottom: 16px;
+  }
+
+  &:last-child {
+    margin-bottom: 35px;
   }
 }
 
@@ -1644,6 +1701,109 @@ select::-ms-expand {
 
 //custom select end
 //contacts end
+//pagination start
+
+.pagination {}
+
+.pagination__inner {}
+
+.pagination__list {
+  display: flex;
+  align-items: center;
+
+  span {
+    margin-right: 9px;
+  }
+}
+
+.pagination__list-item {
+  @include text-style(400, 15px, normal, #0066d6);
+  margin-right: 9px;
+
+  &:last-child {
+    margin-right: 0px;
+  }
+}
+
+.pagination__list-link {}
+
+//pagination end
+//assort start
+
+.assort {}
+
+.assort__inner {
+  padding-bottom: 73px;
+}
+
+.assort__content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  row-gap: 20px;
+}
+
+.assort__content-item {}
+
+.assort__item-wrapper {
+  padding: 22px 20px;
+  border: 2px solid rgba(255, 215, 6, 0.62);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.assort__img-box {
+  min-height: 170px;
+  margin-bottom: 16px;
+
+}
+
+.assort__item-img {}
+
+.assort__item-title {
+  @include text-style(700, 22px, normal, #333554);
+  margin-bottom: 13px;
+}
+
+.assort__item-price {
+  @include text-style(700, 26px, normal, #f09223);
+  margin-bottom: 7px;
+}
+
+.assort__item-list {
+  margin-bottom: 19px;
+}
+
+.assort__list-item {
+  @include text-style(400, 16px, normal, #333554);
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    background-color: #333554;
+    border-radius: 100%;
+    display: block;
+    margin-right: 10px;
+  }
+}
+
+.assort__item-btn {
+  @include text-style(700, 18px, normal, #333554);
+  padding: 23px;
+  text-align: center;
+  padding-bottom: 28px;
+  border-radius: 10px;
+  box-shadow: 0 9px 14px 0 rgba(255, 188, 74, 0.21);
+  background: linear-gradient(180deg, #ffd42a 84.9%, #e0b300 100%);
+}
+
+//assort end
 //MAIN END
 
 //FOOTER START
@@ -2162,6 +2322,14 @@ select::-ms-expand {
     align-items: center;
   }
 
+  .contacts__title--assort {
+    font-size: 20px;
+
+    &:first-child {
+      font-size: 35px;
+    }
+  }
+
   //1000px end
 }
 
@@ -2389,78 +2557,87 @@ select::-ms-expand {
     background: #fee4b9;
   }
 
-  .footer{
-    .container{
+  .footer {
+    .container {
       padding: 0px 7px;
     }
   }
 
-  .footer__logo{
+  .footer__logo {
     width: 360px;
   }
 
-  .footer__item-icon{
+  .footer__item-icon {
     margin-left: 17px;
     margin-right: 13px;
   }
 
-  .footer__item-title{
+  .footer__item-title {
     font-size: 14px;
   }
 
-  .footer__item-phone{
+  .footer__item-phone {
     font-size: 18px;
   }
 
-  .footer__item-text{
+  .footer__item-text {
     font-size: 12px;
   }
 
-  .footer__item-img{
+  .footer__item-img {
     width: 188px;
   }
 
-  .footer__services-title{
+  .footer__services-title {
     margin: 35px 0px;
     font-size: 18px;
     opacity: 1;
   }
 
-  .footer__services-grid{
+  .footer__services-grid {
     grid-template: repeat(12, 1fr) / repeat(1, 1fr);
   }
 
-  .footer__item-title{
+  .footer__item-title {
     max-width: 118px;
   }
 
-  .footer__row-text{
+  .footer__row-text {
     font-size: 14px;
   }
 
-  .footer__row{
+  .footer__row {
     margin: 0px;
   }
 
-  .footer__row-icon{
+  .footer__row-icon {
     margin-left: 16px;
     margin-right: 12px;
   }
 
-  .footer__row-text{
+  .footer__row-text {
     margin-right: 15px;
 
-    &:last-child{
+    &:last-child {
       margin-right: 0px;
     }
   }
 
-  .footer__content{
+  .footer__content {
     align-items: start;
   }
 
-  .footer__content-services{
+  .footer__content-services {
     margin-left: 17px;
+  }
+
+  .advantages__blockqoute{
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .advantages__blockqoute-img{
+    display: none;
   }
 
   //630px end
@@ -2479,6 +2656,20 @@ select::-ms-expand {
 
   .header__form-input {
     max-width: 168px;
+  }
+
+  .contacts--assort{
+    background-image: url("../images/assort-page/form-img-mob.png");
+  }
+
+  .contacts__title--assort{
+    font-size: 18px;
+    margin-bottom: 75px;
+
+    &:first-child{
+      font-size: 32px;
+      margin-bottom: 22px;
+    }
   }
 
   //450px end
